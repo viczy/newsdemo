@@ -25,7 +25,7 @@ static NewsProvider *_provier;
                      failure:(void(^)(NSError *error))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSURL *URL = [NSURL URLWithString:@"http://localhost:3000/api/v1/infos?page=1&per_page=20"];
+    NSURL *URL = [NSURL URLWithString:@"http://newsdemo.herokuapp.com/api/v1/infos"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
